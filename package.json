@@ -67,5 +67,13 @@
     "build": "cross-env NODE_ENV=production webpack",
     "lint": "eslint ./src/**/**.js",
     "lint:fix": "eslint ./src/**/**.js --fix"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/config/tests/jest.config"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
   }
 }
