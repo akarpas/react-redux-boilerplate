@@ -14,7 +14,8 @@ module.exports = {
     rules
   },
   plugins: [
-    new CleanWebpackPlugin([paths.outputPath.split('/').pop()], {
+    new CleanWebpackPlugin({
+      options: [paths.outputPath.split('/').pop()],
       root: paths.root
     })
   ],
