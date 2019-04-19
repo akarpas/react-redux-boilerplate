@@ -20,7 +20,7 @@ module.exports = {
     maxEntrypointSize: 8500000,
     assetFilter: assetFilename => {
       return (
-        assetFilename.endsWith('.css') || assetFilename.endsWith('.js')
+        assetFilename.endsWith('.scss') || assetFilename.endsWith('.css') || assetFilename.endsWith('.js')
       );
     }
   },
@@ -35,6 +35,7 @@ module.exports = {
     hot: true,
     historyApiFallback: true,
   },
+  devtool: 'source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
   ]
