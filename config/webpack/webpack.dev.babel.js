@@ -1,5 +1,4 @@
 import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 import paths from './paths';
 import rules from './rules';
@@ -10,6 +9,7 @@ module.exports = {
     filename: '[name].js',
     path: paths.outputPath,
     chunkFilename: '[name].js',
+    publicPath: '/',
   },
   module: {
     rules
